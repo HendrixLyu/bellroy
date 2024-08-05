@@ -1,38 +1,96 @@
-.App {
+/* App.css */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'GTUltra', 'Frank Ruhl Libre', 'PT Serif', 'Noto Serif', 'Noto Serif JP', 'Noto Serif KR', 'Noto Serif SC', 'Noto Serif TC', ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  background-color: #EFEAE5;
+  color: #333;
+}
+
+.app {
   text-align: center;
+  margin: 40px auto;
+  max-width: 500px;
+  font-family: 'GTUltra', 'Frank Ruhl Libre', 'PT Serif', 'Noto Serif', 'Noto Serif JP', 'Noto Serif KR', 'Noto Serif SC', 'Noto Serif TC', ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.grid {
+  display: inline-block;
+  margin-bottom: 30px;
+  border: 2px solid #e4e4e4;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.row {
   display: flex;
-  flex-direction: column;
+}
+
+.cell {
+  width: 60px;
+  height: 60px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border: 1px solid #e4e4e4;
+  background-color: #f9f9f9;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
 }
 
-.App-link {
-  color: #61dafb;
+.cell:nth-child(5n) {
+  border-right: 1px solid #e4e4e4;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.cell:nth-last-child(-n+5) {
+  border-bottom: 1px solid #e4e4e4;
+}
+
+.cell:first-child {
+  border-left: 1px solid #e4e4e4;
+}
+
+.cell:last-child {
+  border-bottom: 1px solid #e4e4e4;
+}
+
+.robot {
+  background-color: #E15A1D;
+  color: #ffffff;
+  border-radius: 50%;
+  font-size: 24px;
+  line-height: 1;
+}
+
+.controls {
+  margin-top: 30px;
+}
+
+button {
+  background-color: #E15A1D;
+  color: #ffffff;
+  border: none;
+  padding: 12px 20px;
+  margin: 5px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  filter: brightness(0.9);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+.message {
+  margin-top: 20px;
+  color: #e65c50;
+  font-weight: bold;
+  font-size: 18px;
 }
